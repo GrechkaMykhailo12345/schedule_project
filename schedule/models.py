@@ -36,7 +36,7 @@ class Schedule(models.Model):
         return f"Розклад: {self.day}, {self.hour}"
 
 class Grade(models.Model):
-    teacher = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    student = models.ForeignKey(Student, on_delete=models.CASCADE)
     subject = models.ForeignKey(Subject, on_delete=models.CASCADE)
     grade = models.IntegerField()
     date = models.CharField(max_length=100)
